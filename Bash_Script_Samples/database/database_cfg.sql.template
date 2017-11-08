@@ -1,0 +1,52 @@
+/*
+
+ Copyright (c) 2012, 2015, Oracle and/or its affiliates. All rights reserved.
+
+ The MIT License (MIT)
+
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to deal
+ in the Software without restriction, including without limitation the rights
+ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+
+ The above copyright notice and this permission notice shall be included in
+ all copies or substantial portions of the Software.
+
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ THE SOFTWARE.
+*/
+alter system set processes=2000 scope=SPFILE;
+
+alter system set sga_target=2097152000 scope=SPFILE;
+
+alter system set open_cursors=5000 scope=SPFILE;
+
+alter system set db_file_multiblock_read_count=16 scope=both;
+
+alter system set distributed_lock_timeout=7200 scope=SPFILE;
+
+alter system set dml_locks=9700 scope=SPFILE;
+
+alter system set job_queue_processes=1000 scope=SPFILE;
+
+alter system set log_buffer=31457280 scope=SPFILE;
+
+alter system set parallel_max_servers=640 scope=SPFILE;
+
+alter system set plsql_code_type=NATIVE scope=SPFILE;
+
+alter system set compatible='12.1.0.2.0' scope=spfile;
+
+alter system set aq_tm_processes=1 scope=spfile;
+
+alter system set db_writer_processes=5 scope=spfile;
+
+quit;
+
